@@ -6,7 +6,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
-#include "bilibili_downloader.cpp"
+#include "src/bilibili_downloader.cpp"
 
 using tcp = boost::asio::ip::tcp;
 namespace http = boost::beast::http;
