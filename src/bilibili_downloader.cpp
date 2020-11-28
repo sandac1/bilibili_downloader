@@ -19,9 +19,9 @@ class bilibili_downloader
 
     string file_path;
 
-    string vedio_name;
+    string video_name;
 
-    string vedio_duration;
+    string video_duration;
 
     string accept_description;
 
@@ -53,8 +53,8 @@ public:
             for (auto it = data_tree.begin(); it != data_tree.end(); ++it)
             {
                 item = it->second;
-                this->vedio_name = item.get<string>("part");
-                this->vedio_duration = item.get<string>("duration");
+                this->video_name = item.get<string>("part");
+                this->video_duration = item.get<string>("duration");
                 return item.get<string>("cid");
             }
         }
@@ -112,7 +112,7 @@ public:
         return nullptr;
     }
 
-    int download_vedio()
+    int download_video()
     {
         try
         {
@@ -201,7 +201,7 @@ public:
             cid = get_cid();
             real_download_url = get_download_url();
 
-            std::cout << "name:" << this->vedio_name << std::endl;
+            std::cout << "name:" << this->video_name << std::endl;
             std::cout << "description:" << this->accept_description << std::endl;
 
             string quality_choice = "";
@@ -238,7 +238,7 @@ public:
             }
             this->download_quality = quality_map[input_quality_choice];
             get_download_url();
-            download_vedio();
+            download_video();
         }
         catch (const std::exception &e)
         {
