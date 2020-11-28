@@ -189,7 +189,7 @@ public:
             std::cerr <<
                 "Usage: bilibili-get <bvid>\n"<<
                 "Example:\n"<<
-                "   bilibili-get BV1BK4y1Z7SB"<<
+                "   bilibili-get BV12234567890"<<
             std::endl;
             return 0;
         }
